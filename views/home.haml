@@ -1,0 +1,16 @@
+!!! 5
+%html(lang="en")
+  %head
+    %title 
+      Markdownie / watching
+      = @dir
+    %meta(charset="utf-8")
+    %script(src="#{Markdownie.install_path} + '/js/jquery-1.4.2.min.js}")
+  %body
+    #wrapper
+      %h1 Currently watching:
+      %ul#watching
+      - @files.each do |file|
+        %li
+          = file
+          %span.chars= File.size file

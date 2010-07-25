@@ -2,6 +2,10 @@
 
 I <3 [TextMate](http://macromates.com/), and I <3 [Markdown](http://daringfireball.net/projects/markdown/). I wanted a tool which allowed me to write Markdown in Textmate, and preview it in realtime in [Google Chrome](http://www.google.com/chrome/index.html).
 
+# Usage, etc
+
+I'll let you know as soon as I do!
+
 # License
 
 The MIT License
