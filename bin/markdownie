@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require File.join(File.dirname(__FILE__), *%w(.. markdownie))
+Markdownie.watch 'spec/fixtures'
+
+def help_and_exit
+  puts "Usage: markdownie <dirname>"
+  puts "Then open a *modern web browser* and head to http://localhost:#{Sinatra::Application.port}"
+  exit -1
+end
+
+help_and_exit unless dir = ARGV.shift
+
+Markdownie.watch dir
+
+set :run

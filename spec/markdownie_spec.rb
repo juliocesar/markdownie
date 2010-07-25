@@ -18,4 +18,16 @@ describe Markdownie do
     Markdownie.watch fixtures_path
     Markdownie.dir.should == fixtures_path
   end
+  
+  context 'deciding whether to CSS files' do
+    it "uses one found in the directory provided by the user" do
+      File.should_receive(:exists?).with("#{Markdownie.dir}/css/forlols.css").and_return(true)
+      Markdownie.css_path 'forlols.css'
+    end
+    
+    it "uses one found in Markdownie's install path if one provided by the user is not found" do
+      File.should_receive(:exists?).with("#{Markdownie.dir}/css/screen.css").and_return(false)
+      Markdownie.css_path 'screen.css'
+    end
+  end
 end

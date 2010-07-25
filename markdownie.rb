@@ -21,19 +21,31 @@ module Markdownie
     end
     
     def dir
-      @watching.to_s
+      @watching.cleanpath.to_s
     end
     
     def install_path
-      Pathname.new(__FILE__).dirname.parent.to_s
+      Pathname.new(__FILE__).dirname.realpath.to_s
+    end
+    
+    def css_path stylesheet
+      source = File.exists?(dir + "/css/#{stylesheet}") ? dir : install_path
+      source + "/css/#{stylesheet}"
     end
   end
 end
 
-Markdownie.watch 'spec/fixtures'
+configure do
+  set :port => 5678
+end
 
 get '/' do
   haml :home
+end
+
+get '/css/:css' do  
+  content_type 'text/css'
+  File.read Markdownie.css_path(params[:css])
 end
 
 get '/file/:path' do
