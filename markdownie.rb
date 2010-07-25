@@ -33,9 +33,10 @@ end
 Markdownie.watch 'spec/fixtures'
 
 get '/' do
-  haml :home, :layout => false
+  haml :home
 end
 
 get '/file/:path' do
-  Markdownie.render params[:path]
+  @markdown = Markdownie.render params[:path]
+  haml :file
 end

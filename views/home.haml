@@ -1,17 +1,6 @@
-!!! 5
-%html(lang="en")
-  %head
-    %title 
-      Markdownie - watching #{Markdownie.dir}
-      = @dir
-    %meta(charset="utf-8")
-    %link(rel="stylesheet" href="/screen.css")
-    %script(src="#{Markdownie.install_path} + '/js/jquery-1.4.2.min.js}")
-  %body
-    #wrapper
-      %h1#current-dir
-        Currently watching 
-      %ul#watching
-        - Markdownie.files.each do |file|
-          %li
-            #{Markdownie.dir}/<a href="/file/#{file}">#{file}</a>
+%h1#current-dir
+  Currently watching 
+%ul#watching
+  - Markdownie.files.each do |file|
+    %li
+      #{Markdownie.dir}/<a href="/file/#{file}">#{file}</a>
