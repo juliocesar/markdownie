@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require File.join(File.dirname(__FILE__), *%w(.. markdownie))
-Markdownie.watch 'spec/fixtures'
 
 def help_and_exit
   puts "Usage: markdownie <dirname>"
@@ -11,5 +10,4 @@ end
 help_and_exit unless dir = ARGV.shift
 
 Markdownie.watch dir
-
 set :run
