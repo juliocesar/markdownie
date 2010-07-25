@@ -6,3 +6,7 @@ def root
   File.dirname __FILE__
 end
 
+def fixtures_path
+  root + '/fixtures'
+end
+
