@@ -1,6 +1,5 @@
 (function($) {
   Markdownie = {
-    updated: "0",
     poll: poll
   }
 
@@ -8,7 +7,7 @@
     $.get(window.location.pathname,
       { raw: true },
       function(html) {
-        $('#wrapper').html(html);
+        if (html != "") { $('#wrapper').html(html) };
         Markdownie.poll();
       }
     )
