@@ -16,6 +16,9 @@ Markdownie will then look for markdown files in that directory, and generate an 
 
 Every time you save the file, the updates will get sent to the browser.
 
+# Styling
+
+Markdownie will look for a _css_ folder in the folder you're watching. If you add a stylesheet named _screen.css_ to it, it will take precedence over Markdownie's.
 
 # License
 
