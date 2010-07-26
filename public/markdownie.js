@@ -13,6 +13,7 @@
       }
     )
   }
-
-  poll();
+  if (/^\/file/.test(window.location.pathname)) {
+    poll();
+  }
 })(jQuery);
