@@ -4,7 +4,18 @@ I <3 [TextMate](http://macromates.com/), and I <3 [Markdown](http://daringfireba
 
 # Usage, etc
 
-I'll let you know as soon as I do!
+Install via rubygems
+
+    $ sudo gem install markdownie
+
+In the console
+
+    $ markdownie <dir>
+    
+Markdownie will then look for markdown files in that directory, and generate an index which you can see by browsing to http://localhost:5678.
+
+Every time you save the file, the updates will get sent to the browser.
+
 
 # License
 

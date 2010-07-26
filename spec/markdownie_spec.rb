@@ -20,7 +20,6 @@ describe Markdownie do
   it "#dir returns the directory being watched" do
     Markdownie.watch fixtures_path
     Markdownie.dir.should == Pathname.new(fixtures_path).cleanpath.to_s
-    
   end
   
   context 'deciding whether to CSS files' do

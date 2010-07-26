@@ -1,6 +1,6 @@
 %h1#current-dir
   Currently watching 
 %ul#watching
-  - Markdownie.files.each do |file|
+  - @files.each do |file|
     %li
-      #{Markdownie.dir}/<a href="/file/#{file}">#{file}</a>
+      #{@dir}/<a href="/file/#{file}">#{file}</a>
