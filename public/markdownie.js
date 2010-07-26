@@ -3,16 +3,16 @@
     updated: "0",
     poll: poll
   }
-  
+
   function poll() {
-    $.get(window.location.pathname, 
+    $.get(window.location.pathname,
       { raw: true },
       function(html) {
         $('#wrapper').html(html);
-        // Markdownie.poll();
+        Markdownie.poll();
       }
     )
   }
-  
-  // poll();
+
+  poll();
 })(jQuery);
